@@ -36,7 +36,7 @@ namespace Engine
             {
                 //jika melebihi dari finish
                 int pos = this.position - 99;
-                this.position = this.position - pos;
+                this.position = 99 - pos;
             }
 
         }

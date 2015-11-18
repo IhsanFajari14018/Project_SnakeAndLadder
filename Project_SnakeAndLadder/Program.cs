@@ -20,6 +20,9 @@ namespace Project_SnakeAndLadder
             Application.Run(new Form1());*/
             Board b = new Board();
             Player[] players = { new Player(0, "Player 1"), new Player(0, "Player 2") };
+            Dice d = new Dice();
+            Game g = new Game(b, players, d);
+            g.RunTheGame();
         }
     }
 }
