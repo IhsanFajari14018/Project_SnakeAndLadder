@@ -53,13 +53,13 @@ namespace Engine
         //suruh player gerak dengan mengocok dadu
         //dan mentukan posisi barunya.
         players[turn].move(this.dice);
-        int pos = players[turn].getPosition();
+        /*int pos = players[turn].getPosition();
         
         //apakah player pada posisi tersebut
         //menemukan tangga atau ular.
         int newPos = papan.getIntoTile();
         players[turn].setPosition(newPos);
-        
+        */
          //setiap pergerakan player,
          //lakukan pengecekan apakah dia sudah mencapai finish
          pemenang=players[turn].isWin();
