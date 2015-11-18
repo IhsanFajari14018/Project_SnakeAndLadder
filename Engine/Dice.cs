@@ -1,3 +1,4 @@
+using System;
 namespace Engine { 
 
   class Dice
@@ -13,7 +14,7 @@ namespace Engine {
     // random dari 1-6
     public int RollDice() {
         Random r = new Random();
-        int dices = rnd.Next(1, 7);
+        int dices = r.Next(1, 7);
         return dices;
     }
 }
