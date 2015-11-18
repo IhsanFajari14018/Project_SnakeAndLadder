@@ -2,7 +2,7 @@ using System;
 namespace Engine
 {
 
-    class Dice
+    public class Dice
     {
         private int sides;
         public Dice(int sides)

@@ -1,6 +1,6 @@
 namespace Engine
 {
-    class Tile
+    public class Tile
     {
         private int number; //nomor Tile
         private Teleporter isSnake, isLadder;

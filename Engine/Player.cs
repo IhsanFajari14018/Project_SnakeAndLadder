@@ -1,6 +1,6 @@
 namespace Engine
 {
-    class Player
+    public class Player
     {
         private int position;
         private string name;

@@ -1,6 +1,6 @@
 namespace Engine
 {
-    class Ladder : Teleporter
+    public class Ladder : Teleporter
     {
         public Ladder(int head, int tail) : base(head, tail)
         {

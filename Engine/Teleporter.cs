@@ -1,6 +1,6 @@
 namespace Engine
 {
-    abstract class Teleporter
+    public abstract class Teleporter
     {
         private int head, tail;
 

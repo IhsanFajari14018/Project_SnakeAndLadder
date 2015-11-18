@@ -4,7 +4,7 @@ namespace Engine
     ///kelas controller.
     /// yang menjalankan semua proses yang diperlukan untuk menjalankan game ini.
     ///</summary>
-    class Game
+    public class Game
     {
 
         ///<summary>

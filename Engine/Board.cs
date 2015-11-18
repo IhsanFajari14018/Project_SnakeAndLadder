@@ -1,7 +1,7 @@
 using System;
 namespace Engine
 {
-    class Board
+    public class Board
     {
         private Tile[] tiles;
 

@@ -1,6 +1,6 @@
 namespace Engine
 {
-    class Snake : Teleporter//tail adalah titik akhir (end)
+    public class Snake : Teleporter//tail adalah titik akhir (end)
     {
         public Snake(int head, int tail) : base(head, tail)
         {
