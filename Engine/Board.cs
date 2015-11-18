@@ -49,5 +49,9 @@ namespace Engine
     public Tile[] getTiles() {
         return tiles.GetNumber;
     }
+    
+    public Tile getTile(int num){
+      return tiles[num];
+    }
   }
 }
