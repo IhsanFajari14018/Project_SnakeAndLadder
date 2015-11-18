@@ -1,17 +1,19 @@
 using System;
 namespace Engine
 {
-  class Board
-  {
-    private Tile[] tiles;
+    class Board
+    {
+        private Tile[] tiles;
 
-    public Board(){
-       this.tiles = new Tile[100];
-       for(int i=0;i<tiles.Length;i++){
-          tiles[i]=new Tile(i);
-       }
-      GenerateBoard();
-    }
+        public Board()
+        {
+            this.tiles = new Tile[100];
+            for (int i = 0; i < tiles.Length; i++)
+            {
+                tiles[i] = new Tile(i);
+            }
+            GenerateBoard();
+        }
 
         public void GenerateBoard()
         {
@@ -45,21 +47,26 @@ namespace Engine
                 }
             }
         }
-      private bool IsValidSnakeLadder(Tile t1,Tile t2){
-        if(t1.GetSnakeLadder()!=null||t2.GetSnakeLadder()!=null){
-            return false;
+        private bool IsValidSnakeLadder(Tile t1, Tile t2)
+        {
+            if (t1.GetSnakeLadder() != null || t2.GetSnakeLadder() != null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
-        else{
-            return true;
-        }
-    }
 
-    public Tile[] GetTiles() {
-        return tiles;
+        public Tile[] GetTiles()
+        {
+            return tiles;
+        }
+
+        public Tile GetTile(int num)
+        {
+            return tiles[num];
+        }
     }
-    
-    public Tile GetTile(int num){
-      return tiles[num];
-    }
-  }
 }
