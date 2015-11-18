@@ -24,10 +24,7 @@ namespace Engine
     public void move(Dice d){
       int steps = d.roll();
       position=position+steps;
-      if(this.position==99){
-        //pas finish
-        this.win = true;
-      }else if(this.position>99){
+      if(this.position>99){
         //jika melebihi dari finish
         int pos = this.position-99;
         this.position = this.position-pos;
@@ -40,6 +37,10 @@ namespace Engine
     }
     
     public boolean isWin(){
+      if(this.position==99){
+        //pas finish
+        this.win = true;
+      }
       return this.win;
     }
   }
