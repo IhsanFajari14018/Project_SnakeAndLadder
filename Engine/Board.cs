@@ -22,8 +22,9 @@ namespace Engine
         end = r.nextInt(98)+1;
         if((start<end)&&isValidSnakeLadder(tiles[start],tiles[end])){
         //tiles[start].setSnake(true);
-        tiles[start].SetIsSnake(new Snake(start,end));
-        tiles[end].SetIsSnake(new Snake(start,end));
+        tiles[start].SetIsSnake(new Ladder(end,start));
+        tiles[end].SetIsSnake(new Ladder(end,start));
+        count++;
         }
       }
       count=start=end=0;
@@ -32,8 +33,8 @@ namespace Engine
         end=r.nextInt(98)+1;
         if((start>end)&&isValidSnakeLadder(tiles[start],tiles[end])){
           //tiles[start].setSnake(true);
-          tiles[start].SetIsLadder(new Ladder(start,end));
-          tiles[end].SetIsLadder(new Ladder(start,end));
+          tiles[start].SetIsLadder(new Snake(start,end));
+          tiles[end].SetIsLadder(new Snake(start,end));
           count++;
       }
     }
