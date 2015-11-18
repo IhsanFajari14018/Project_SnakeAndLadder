@@ -1,6 +1,6 @@
 namespace Engine
 {
-  class Ladder : Teleport
+  class Ladder : Teleporter
   {
     public Ladder(int head, int tail):base(head,tail){
       
@@ -8,7 +8,7 @@ namespace Engine
     
     public override void MovePlayer(Player p){
       //set posisi pemain pada head
-      p.setPosition(head);
+      p.SetPosition(Head);
     }
   }
 }

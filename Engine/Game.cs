@@ -39,27 +39,27 @@ namespace Engine
       this.papan = b;
       this.players = pemain;
       this.winner = null;
-      this.totalPlayer = pemain.length;
+      this.totalPlayer = pemain.Length;
     }
     
     ///<summary>
     /// Method untuk menjalankan permainan ular tangga.
     ///</summary>
-    public void runTheGame(){
+    public void RunTheGame(){
       int turn = 0;
-      boolean pemenang=false;
+      bool pemenang=false;
       while(pemenang==false){
         
         //suruh player gerak dengan mengocok dadu
         //dan mentukan posisi barunya.
-        players[turn].move(this.dice);
-        int pos = players[turn].getPosition();
+        players[turn].Move(this.dice);
+        int pos = players[turn].GetPosition();
         
         //apakah player pada posisi tersebut
         //menemukan tangga atau ular.
-        Teleporter snakeLadder = b.getTile(pos).getSnakeLadder();
+        Teleporter snakeLadder = papan.GetTile(pos).GetSnakeLadder();
         if(snakeLadder!=null){
-          snakeLadder.movePlayer();
+          snakeLadder.MovePlayer(players[turn]);
         }
         /*
         int newPos = papan.getIntoTile();
@@ -93,8 +93,8 @@ namespace Engine
     ///<summary>
     ///Mengembalikan informasi nama pemenang.
     ///</summary>
-    public String getWinnerInformation(){
-      return this.winner.getName();
+    public string getWinnerInformation(){
+      return this.winner.GetName();
     }
   }
   

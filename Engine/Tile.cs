@@ -34,7 +34,7 @@ namespace Engine
       return this.isLadder;
     }
     
-    public Teleporter getSnakeLadder(){
+    public Teleporter GetSnakeLadder(){
       if(isSnake!=null){
         return isSnake;
       }

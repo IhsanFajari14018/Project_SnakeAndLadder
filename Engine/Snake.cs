@@ -10,7 +10,7 @@ namespace Engine
     public override void MovePlayer(Player p)
     {
       //set posisi pemain pada tail
-      p.setPosition(tail);
+      p.SetPosition(Tail);
     }
   }
 }

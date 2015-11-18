@@ -1,28 +1,28 @@
 namespace Engine
 {
-  class player
+  class Player
   {
     private int position;
-    private final String name;
+    private string name;
     
     //Dice akan disimpan di class Game.cs / Board.cs.
     
     //Player tidak menyimpan Board.cs.
     
-    private boolean win;
+    private bool win;
 
-    public Player(int position,String name) {
+    public Player(int position,string name) {
         this.position = 0;
         this.name=name;
         this.win = false;
     }
     
-    public void setPosition(int position) {
+    public void SetPosition(int position) {
         this.position = position;
     }
     
-    public void move(Dice d){
-      int steps = d.roll();
+    public void Move(Dice d){
+      int steps = d.RollDice();
       position=position+steps;
       if(this.position>99){
         //jika melebihi dari finish
@@ -32,11 +32,11 @@ namespace Engine
       
     }
     
-    public int getPosition() {
+    public int GetPosition() {
         return this.position;
     }
     
-    public boolean isWin(){
+    public bool IsWin(){
       if(this.position==99){
         //pas finish
         this.win = true;
