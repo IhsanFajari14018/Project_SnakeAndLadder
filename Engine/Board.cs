@@ -7,7 +7,7 @@ namespace Engine
     public Board(){
        this.tile = new Tile[100];
        for(int i=0;i<tiles.length;i++){
-          tiles[i]=new Tile();
+          tiles[i]=new Tile(i);
        }
       generateBoard();
     }
@@ -21,9 +21,9 @@ namespace Engine
         start = r.nextInt(98)+1;
         end = r.nextInt(98)+1;
         if((start<end)&&isValidSnakeLadder(tiles[start],tiles[end])){
-        tiles[start].setSnake(true);
-        tiles[start].setSnakeladder(new SnakeLadder(start,end));
-        tiles[end].setSnakeladder(new SnakeLadder(start,end));
+        //tiles[start].setSnake(true);
+        tiles[start].SetIsSnake(new Snake(start,end));
+        tiles[end].SetIsSnake(new Snake(start,end));
         }
       }
       count=start=end=0;
@@ -31,14 +31,14 @@ namespace Engine
         start=r.nextInt(98)+1;
         end=r.nextInt(98)+1;
         if((start>end)&&isValidSnakeLadder(tiles[start],tiles[end])){
-          tiles[start].setSnake(true);
-          tiles[start].setSnakeladder(new SnakeLadder(start,end));
-          tiles[end].setSnakeladder(new SnakeLadder(start,end));
+          //tiles[start].setSnake(true);
+          tiles[start].SetIsLadder(new Ladder(start,end));
+          tiles[end].SetIsLadder(new Ladder(start,end));
           count++;
       }
     }
       private boolean isValidSnakeLadder(Tile t1,Tile t2){
-        if(t1.getSnakeladder()!=null||t2.getSnakeladder()!=null){
+        if(t1.getSnakeLadder()!=null||t2.getSnakeLadder()!=null){
             return false;
         }
         else{
