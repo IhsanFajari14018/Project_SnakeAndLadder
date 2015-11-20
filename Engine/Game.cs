@@ -41,13 +41,20 @@ namespace Engine
         ///<summary>
         /// Konstruktor.
         ///</summary>
-        public Game(Board b, Player[] pemain, Dice d)
+        public Game(Board b, Dice d,int gameType)
         {
             this.dice = d;
             this.papan = b;
-            this.players = pemain;
+            if (gameType == GAME_TYPE1)
+            {
+                players = new Player[] { new Player(0, "Player 1", false), new Player(0, "Player 2", false) };
+            }
+            else
+            {
+                players = new Player[] { new Player(0, "Player 1", false), new Player(0, "Computer", true) };
+            }
             this.winner = null;
-            this.totalPlayer = pemain.Length;
+            this.totalPlayer = players.Length;
             this.playingTurn = 0;
         }
 
