@@ -1,20 +1,33 @@
 using System;
 namespace Engine
 {
-
+    ///<summary>
+    ///Kelas yang merepresentasikan sebuah dadu.
+    ///</summary>
     public class Dice
     {
         private int sides;
+        
+        ///<summary>
+        ///Constructor kelas Dice dengan parameter.
+        ///</summary>
+        /// <param name="sides">Banyaknya sisi pada dadu</param>
         public Dice(int sides)
         {
             this.sides = sides;
         }
-        //constructor tanpa parameter
+        
+        ///<summary>
+        ///Constructor kelas Dice tanpa parameter.
+        ///</summary>
         public Dice()
         {
             this.sides = 6;
         }
-        // random dari 1-6
+        
+        ///<summary>
+        ///Method untuk mengocok dan mengembalikan nilai dadu.
+        ///</summary>
         public int RollDice()
         {
             Random r = new Random();
