@@ -1,21 +1,35 @@
 namespace Engine
 {
+    ///<summary>
+    ///Kelas yang merepresentasikan sebuah petak pada papan permainan
+    ///</summary>
     public class Tile
     {
         private int number; //nomor Tile
         private Teleporter isSnake, isLadder;
 
+        ///<summary>
+        ///Constructor kelas Tile
+        ///</summary>
+        /// <param name="num">Indeks petak</param>
         public Tile(int num)
         {
             this.number = num;
             this.isSnake = this.isLadder = null;
         }
 
+        ///<summary>
+        ///Method untuk mengganti nomor indeks petak
+        ///</summary>
+        /// <param name="num">Indeks petak yang baru</param>
         public void SetNumber(int num)
         {
             this.number = num;
         }
 
+        ///<summary>
+        ///
+        ///</summary>
         public void SetIsSnake(Teleporter isSnake)
         {
             this.isSnake = isSnake;
