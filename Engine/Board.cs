@@ -7,6 +7,32 @@ namespace Engine
     public class Board
     {
         private Tile[] tiles;
+        private Snake[] snakeSet;
+        private Ladder[] ladderSet;
+
+        public Snake[] Snakes
+        {
+            get
+            {
+                return snakeSet;
+            }
+            set
+            {
+                snakeSet = value;
+            }
+        }
+
+        public Ladder[] Ladders
+        {
+            get
+            {
+                return ladderSet;
+            }
+            set
+            {
+                ladderSet = value;
+            }
+        }
 
         ///<summary>
         ///Constructor kelas Board.
@@ -18,6 +44,8 @@ namespace Engine
             {
                 tiles[i] = new Tile(i);
             }
+            snakeSet = new Snake[8];
+            ladderSet = new Ladder[8];
             GenerateBoard();
         }
 
@@ -33,9 +61,10 @@ namespace Engine
                 end = r.Next(2, 99);
                 if ((start < end) && IsValidSnakeLadder(tiles[start], tiles[end]))
                 {
-                    //tiles[start].setSnake(true);
-                    tiles[start].SetIsSnake(new Ladder(end, start));
-                    tiles[end].SetIsSnake(new Ladder(end, start));
+                    Ladder l = new Ladder(end, start);
+                    tiles[start].SetIsSnake(l);
+                    tiles[end].SetIsSnake(l);
+                    ladderSet[count] = l;
                     count++;
                 }
             }
@@ -46,9 +75,10 @@ namespace Engine
                 end = r.Next(2, 99);
                 if ((start > end) && IsValidSnakeLadder(tiles[start], tiles[end]))
                 {
-                    //tiles[start].setSnake(true);
-                    tiles[start].SetIsLadder(new Snake(start, end));
-                    tiles[end].SetIsLadder(new Snake(start, end));
+                    Snake s = new Snake(start, end);
+                    tiles[start].SetIsLadder(s);
+                    tiles[end].SetIsLadder(s);
+                    snakeSet[count] = s;
                     count++;
                 }
             }
