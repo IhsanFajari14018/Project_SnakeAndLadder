@@ -28,33 +28,50 @@ namespace Engine
         }
 
         ///<summary>
-        ///
+        ///Method untuk mengganti teleporter ular yang ada pada petak
         ///</summary>
+        /// <param name="isSnake">Teleporter ular yang baru</param>
         public void SetIsSnake(Teleporter isSnake)
         {
             this.isSnake = isSnake;
         }
 
+        ///<summary>
+        ///Method untuk mengganti teleporter tangga yang ada pada petak
+        ///</summary>
+        ///<param name="isLadder">Teleporter tangga yang baru</param>
         public void SetIsLadder(Teleporter isLadder)
         {
             this.isLadder = isLadder;
         }
 
+        ///<summary>
+        ///Method untuk mengembalikan indeks petak
+        ///</summary>
         public int GetNumber()
         {
             return this.number;
         }
 
+        ///<summary>
+        ///Method untuk mengembalikan teleporter ular yang ada
+        ///</summary>
         public Teleporter IsSnake()
         {
             return this.isSnake;
         }
 
+        ///<summary>
+        ///Method untuk mengembalikan teleporter tangga yang ada
+        ///</summary>
         public Teleporter IsLadder()
         {
             return this.isLadder;
         }
 
+        ///<summary>
+        ///Method untuk mengembalikan teleporter yang ada
+        ///</summary>
         public Teleporter GetSnakeLadder()
         {
             if (isSnake != null)
