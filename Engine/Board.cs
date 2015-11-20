@@ -1,10 +1,16 @@
 using System;
 namespace Engine
 {
+    ///<summary>
+    ///Kelas yang merepresentasikan sebuah papan permainan.
+    ///</summary>
     public class Board
     {
         private Tile[] tiles;
 
+        ///<summary>
+        ///Constructor kelas Board.
+        ///</summary>
         public Board()
         {
             this.tiles = new Tile[100];
@@ -15,6 +21,9 @@ namespace Engine
             GenerateBoard();
         }
 
+        ///<summary>
+        ///Method untuk mempersiapkan papan permainan.
+        ///</summary>
         public void GenerateBoard()
         {
             Random r = new Random();
@@ -47,6 +56,7 @@ namespace Engine
                 }
             }
         }
+        
         private bool IsValidSnakeLadder(Tile t1, Tile t2)
         {
             if (t1.GetSnakeLadder() != null || t2.GetSnakeLadder() != null)
@@ -59,11 +69,18 @@ namespace Engine
             }
         }
 
+        ///<summary>
+        ///Method untuk mendapatkan semua petak pada papan.
+        ///</summary>
         public Tile[] GetTiles()
         {
             return tiles;
         }
 
+        ///<summary>
+        ///Method untuk mendapatkan petak dengan nomor tertentu
+        ///</summary>
+        ///<param name="num">Indeks petak yang akan dikembalikan</param>
         public Tile GetTile(int num)
         {
             return tiles[num];
