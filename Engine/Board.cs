@@ -21,10 +21,7 @@ namespace Engine
             GenerateBoard();
         }
 
-        ///<summary>
-        ///Method untuk mempersiapkan papan permainan.
-        ///</summary>
-        public void GenerateBoard()
+        private void GenerateBoard()
         {
             Random r = new Random();
             int count = 0;
