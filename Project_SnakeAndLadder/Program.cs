@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Engine;
+using System.Windows.Forms;
 
 namespace Project_SnakeAndLadder
 {
@@ -15,14 +12,23 @@ namespace Project_SnakeAndLadder
         [STAThread]
         static void Main()
         {
-            /*Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());*/
-            Board b = new Board();
-            Player[] players = { new Player(0, "Player 1"), new Player(0, "Player 2") };
+            Application.Run(new MainForm());
+            /*Board b = new Board();
+            Player[] players = { new Player(0, "Player 1", false), new Player(0, "Player 2", true) };
             Dice d = new Dice();
             Game g = new Game(b, players, d);
-            g.RunTheGame();
+            while (g.GetWinner() == null)
+            {
+                Player current = g.GetCurrentPlayer();
+                if (!current.IsCompPlayer())
+                {
+                    Console.Write("{0}'s turn to move: ", current.GetName());
+                    Console.ReadLine();
+                }
+                g.RunTheGame();
+            }*/
         }
     }
 }

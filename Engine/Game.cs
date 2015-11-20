@@ -7,6 +7,11 @@ namespace Engine
     ///</summary>
     public class Game
     {
+        private const int GAME_TYPE1 = 1;//permainan untuk manusia vs manusia
+
+        private const int GAME_TYPE2 = 2;//permainan untuk manusia vs komputer
+
+        private int playingTurn;//penanda giliran pemain
 
         ///<summary>
         /// Atribut yang menyimpan board.
@@ -43,6 +48,7 @@ namespace Engine
             this.players = pemain;
             this.winner = null;
             this.totalPlayer = pemain.Length;
+            this.playingTurn = 0;
         }
 
         ///<summary>
@@ -50,61 +56,63 @@ namespace Engine
         ///</summary>
         public void RunTheGame()
         {
-            int turn = 0;
-            bool pemenang = false;
-            while (pemenang == false)
+            //suruh player gerak dengan mengocok dadu
+            //dan mentukan posisi barunya.
+            players[playingTurn].Move(this.dice);
+            int pos = players[playingTurn].GetPosition();
+            Console.WriteLine("{0}'s current position: {1}", players[playingTurn].GetName(), pos);
+            //apakah player pada posisi tersebut
+            //menemukan tangga atau ular.
+            Teleporter snakeLadder = papan.GetTile(pos).GetSnakeLadder();
+            if (snakeLadder != null)
             {
-
-                //suruh player gerak dengan mengocok dadu
-                //dan mentukan posisi barunya.
-                players[turn].Move(this.dice);
-                int pos = players[turn].GetPosition();
-                Console.WriteLine("{0}'s current position: {1}", players[turn].GetName(), pos);
-                //apakah player pada posisi tersebut
-                //menemukan tangga atau ular.
-                Teleporter snakeLadder = papan.GetTile(pos).GetSnakeLadder();
-                if (snakeLadder != null)
-                {
-                    snakeLadder.MovePlayer(players[turn]);
-                    Console.WriteLine("{0}'s current position: {1}", players[turn].GetName(), pos);
-                }
-                /*
-                int newPos = papan.getIntoTile();
-                players[turn].setPosition(newPos);
-                */
-                //setiap pergerakan player,
-                //lakukan pengecekan apakah dia sudah mencapai finish
-                pemenang = players[turn].IsWin();
-                if (pemenang)
-                {
-                    setWinner(players[turn]);
-                }
-
-                //giliran player lain.
-                turn = turn + 1;
-                //setelah semua telah mendapat giliran bermain,
-                //dikembalikan ke giliran pertama.
-                if (turn == this.totalPlayer)
-                {
-                    turn = 0;
-                }
-
+                snakeLadder.MovePlayer(players[playingTurn]);
+                Console.WriteLine("{0}'s current position: {1}", players[playingTurn].GetName(), pos);
             }
-            Console.WriteLine("Winner: {0}", winner.GetName());
-        }
+            /*
+            int newPos = papan.getIntoTile();
+            players[turn].setPosition(newPos);
+            */
+            //setiap pergerakan player,
+            //lakukan pengecekan apakah dia sudah mencapai finish
+            if (players[playingTurn].IsWin())
+            {
+                SetWinner(players[playingTurn]);
+                Console.WriteLine("Winner: {0}", GetWinnerInformation());
+            }
 
+            //giliran player lain.
+            playingTurn = playingTurn + 1;
+            //setelah semua telah mendapat giliran bermain,
+            //dikembalikan ke giliran pertama.
+            if (playingTurn == this.totalPlayer)
+            {
+                playingTurn = 0;
+            }            
+        }        
+        
         ///<summary>
         /// Method untuk menentukan pemenang.
         ///</summary>
-        public void setWinner(Player p)
+        public void SetWinner(Player p)
         {
             this.winner = p;
+        }
+
+        public Player GetWinner()
+        {
+            return winner;
+        }
+
+        public Player GetCurrentPlayer()
+        {
+            return players[playingTurn];
         }
 
         ///<summary>
         ///Mengembalikan informasi nama pemenang.
         ///</summary>
-        public string getWinnerInformation()
+        public string GetWinnerInformation()
         {
             return this.winner.GetName();
         }
