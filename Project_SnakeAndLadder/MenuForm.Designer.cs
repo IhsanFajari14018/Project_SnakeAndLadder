@@ -1,6 +1,6 @@
 ﻿namespace Project_SnakeAndLadder
 {
-    partial class MainForm
+    partial class MenuForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // MainForm
+            // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "MainForm";
-            this.Text = "Snakes and Ladders";
+            this.Name = "MenuForm";
+            this.Text = "Menu";
             this.ResumeLayout(false);
 
         }
@@ -44,4 +44,3 @@
         #endregion
     }
 }
-

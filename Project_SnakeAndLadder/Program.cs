@@ -14,7 +14,7 @@ namespace Project_SnakeAndLadder
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new MenuForm());
             /*Board b = new Board();
             Player[] players = { new Player(0, "Player 1", false), new Player(0, "Player 2", true) };
             Dice d = new Dice();
