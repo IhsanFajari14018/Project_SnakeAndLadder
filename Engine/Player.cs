@@ -4,6 +4,7 @@ namespace Engine
     {
         private int position;
         private string name;
+        private bool isComp;
 
         //Dice akan disimpan di class Game.cs / Board.cs.
 
@@ -11,11 +12,12 @@ namespace Engine
 
         private bool win;
 
-        public Player(int position, string name)
+        public Player(int position, string name, bool isComp)
         {
             this.position = 0;
             this.name = name;
             this.win = false;
+            this.isComp = isComp;
         }
 
         public void SetPosition(int position)
@@ -54,6 +56,11 @@ namespace Engine
                 this.win = true;
             }
             return this.win;
+        }
+
+        public bool IsCompPlayer()
+        {
+            return isComp;
         }
     }
 }
