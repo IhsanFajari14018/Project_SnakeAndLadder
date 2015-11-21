@@ -106,11 +106,18 @@ namespace Engine
             this.winner = p;
         }
 
+        ///<summary>
+        ///Getter untuk atribut winner
+        ///Mengembalikan Player yang menang
+        ///</summary>
         public Player GetWinner()
         {
             return winner;
         }
 
+        ///<summary>
+        ///Mengembalikan Player yang sedang bermain sekarang
+        ///</summary>
         public Player GetCurrentPlayer()
         {
             return players[playingTurn];
