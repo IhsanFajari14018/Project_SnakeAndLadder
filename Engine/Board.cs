@@ -49,6 +49,10 @@ namespace Engine
             GenerateBoard();
         }
 
+        /// <summary>
+        /// Method untuk meng-generate board
+        /// Method ini menentukan posisi snake dan ladder di Tile
+        /// </summary>
         private void GenerateBoard()
         {
             Random r = new Random();
@@ -84,6 +88,12 @@ namespace Engine
             }
         }
         
+        /// <summary>
+        /// Method ini mengembalikan true bila snake atau ladder belum ada di t1 dan t2
+        /// false bila snake atau ladder sudah ada di t1 dan t2
+        /// </summary>
+        /// <param name="t1"> tile yang ingin diperiksa</param>
+        /// <param name="t2"> tile yang ingin diperiksa</param>
         private bool IsValidSnakeLadder(Tile t1, Tile t2)
         {
             if (t1.GetSnakeLadder() != null || t2.GetSnakeLadder() != null)
