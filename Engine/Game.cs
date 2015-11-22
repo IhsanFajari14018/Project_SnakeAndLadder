@@ -130,6 +130,15 @@ namespace Engine
         {
             return this.winner.GetName();
         }
+
+        /// <summary>
+        /// Method untuk mengembalikan nomor giliran
+        /// </summary>
+        /// <returns>Nomor giliran</returns>
+        public int GetCurrentTurn()
+        {
+            return this.playingTurn;
+        }
     }
 
 }
