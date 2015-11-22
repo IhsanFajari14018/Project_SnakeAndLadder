@@ -9,3 +9,5 @@ C:\Users\Aspire4755\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\o
 C:\Users\Aspire4755\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.exe
 C:\Users\Aspire4755\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.pdb
 C:\Users\Aspire4755\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\bin\Debug\Engine.xml
+C:\Users\Aspire4755\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.MainForm.resources
+C:\Users\Aspire4755\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.MenuForm.resources

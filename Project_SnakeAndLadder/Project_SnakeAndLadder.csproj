@@ -124,6 +124,24 @@
   <ItemGroup>
     <None Include="Resources\whiteHole.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vs_computerButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vs_computerButton-beforeClicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vs_playerButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vs_playerButton-beforeClicked.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
