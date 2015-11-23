@@ -25,9 +25,10 @@ namespace Engine
             this.sides = 6;
         }
         
-        ///<summary>
-        ///Method untuk mengocok dan mengembalikan nilai dadu.
-        ///</summary>
+        /// <summary>
+        /// Method untuk mengocok dan mengembalikan nilai dadu.
+        /// </summary>
+        /// <returns>nilai dadu yang telah dikocok</returns>
         public int RollDice()
         {
             Random r = new Random();
