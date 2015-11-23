@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Seorang astronot (Pemain) memiliki misi di luar angkasa.
+Tetapi . . .
+Pemain lupa untuk mengaitkan tali dan memakai  jet nitrogen.
+Pemain tidak bisa kembali ke roketnya dan terlempar jauh  di luar angkasa.
+
+Petualangan pemain untuk mencapai BUMI dimulai dari sekarang . . .</value>
+  </data>
 </root>
