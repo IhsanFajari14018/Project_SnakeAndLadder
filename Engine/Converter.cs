@@ -12,7 +12,6 @@ namespace Engine{
     /// <summary>
     /// Konstraktor, langsung memanggil method Convert
     /// </summary>
-    /// <param name="position"> posisi yang ingin diconvert</param>
     public Converter(){
       this.x=this.y=-1;
     }
@@ -20,6 +19,7 @@ namespace Engine{
     /// <summary>
     /// Method untuk meng-convert position ke x dan y
     /// </summary>
+    /// <param name="position">posisi yang ingin dikonversi</param>
     public void Convert(int position){
       int tempX=0;
       int tempY=0;
@@ -42,6 +42,7 @@ namespace Engine{
     /// <summary>
     /// Getter atribut x
     /// </summary>
+    /// <returns>nilai x</returns>
     public int GetX(){
       return x;
     }
@@ -49,6 +50,7 @@ namespace Engine{
     /// <summary>
     /// Getter atribut y
     /// </summary>
+    /// <returns>nilai y</returns>
     public int GetY(){
       return y;
     }
