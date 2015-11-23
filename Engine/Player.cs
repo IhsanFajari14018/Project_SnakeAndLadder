@@ -42,6 +42,7 @@ namespace Engine
         /// <summary>
         /// Getter atribut name
         /// </summary>
+        /// <returns>nama pemain</returns>
         public string GetName()
         {
             return this.name;
@@ -77,6 +78,7 @@ namespace Engine
         /// <summary>
         /// Getter atribut position
         /// </summary>
+        /// <returns>posisi pemain</returns>
         public int GetPosition()
         {
             return this.position;
@@ -85,6 +87,7 @@ namespace Engine
         /// <summary>
         /// Mengembalikan nilai atribut win
         /// </summary>
+        /// <returns>true jika posisi pemain di 99, false jika bukan</returns>
         public bool IsWin()
         {
             if (this.position == 99)
@@ -98,6 +101,7 @@ namespace Engine
         /// <summary>
         /// Mengembalikan nilai atribut isComp
         /// </summary>
+        /// <returns>Atribut isComp</returns>
         public bool IsCompPlayer()
         {
             return isComp;
