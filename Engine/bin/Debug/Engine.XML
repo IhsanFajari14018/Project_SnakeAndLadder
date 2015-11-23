@@ -200,6 +200,12 @@
             </summary>
             <param name="d"> Objek dice</param>
         </member>
+        <member name="M:Engine.Player.GetDiceNum">
+            <summary>
+            Method untuk mengembalikan nilai kocokan dadu
+            </summary>
+            <returns>Hasil kocokan dadu</returns>
+        </member>
         <member name="M:Engine.Player.GetPosition">
             <summary>
             Getter atribut position

@@ -116,5 +116,13 @@ namespace Project_SnakeAndLadder
                 g.DrawString((i+""), new Font("Comic Sans MS", 10), tileNum, x, y);
             }
         }
+
+        private void buttonKocok_Click(object sender, EventArgs e)
+        {
+            Player currentPlayer = game.GetCurrentPlayer();
+            game.RunTheGame();
+            int dice = currentPlayer.GetDiceNum();
+            labelDice.Text = "Keluaran:\n" + dice;
+        }
     }
 }

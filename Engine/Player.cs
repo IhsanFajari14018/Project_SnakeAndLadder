@@ -5,6 +5,7 @@ namespace Engine
         private int position;
         private string name;
         private bool isComp;
+        private int diceNum;
 
         //Dice akan disimpan di class Game.cs / Board.cs.
 
@@ -50,6 +51,7 @@ namespace Engine
         public void Move(Dice d)
         {
             int steps = d.RollDice();
+            diceNum = steps;
             position = position + steps;
             if (this.position > 99)
             {
@@ -58,6 +60,15 @@ namespace Engine
                 this.position = 99 - pos;
             }
 
+        }
+
+        /// <summary>
+        /// Method untuk mengembalikan nilai kocokan dadu
+        /// </summary>
+        /// <returns>Hasil kocokan dadu</returns>
+        public int GetDiceNum()
+        {
+            return this.diceNum;
         }
 
         /// <summary>
