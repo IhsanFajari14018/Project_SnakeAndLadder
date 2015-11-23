@@ -23,6 +23,7 @@ namespace Project_SnakeAndLadder
         public MainForm(int gameType)
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             b = new Board();
             snakes = b.Snakes;
             ladders = b.Ladders;
@@ -40,6 +41,8 @@ namespace Project_SnakeAndLadder
 
         protected override void OnPaint(PaintEventArgs e)
         {
+            Random r = new Random();
+            Bitmap background = new Bitmap(Properties.Resources.space);
             Bitmap tile = new Bitmap(Properties.Resources.tile);
             Bitmap finishTile = new Bitmap(Properties.Resources.finish);
             Bitmap snakeHead = new Bitmap(Properties.Resources.whiteHole);
@@ -50,8 +53,18 @@ namespace Project_SnakeAndLadder
             SolidBrush tileNum = new SolidBrush(Color.Brown);
             SolidBrush snakeNum = new SolidBrush(Color.Red);
             SolidBrush ladderNum = new SolidBrush(Color.White);
-            
+
             for(int i = 0; i < 500; i += 50)
+            {
+                g.DrawImage(background, i, 0);
+            }
+
+            for(int i = 1; i <= 500; i++)
+            {
+                g.FillEllipse(ladderNum, r.Next(1, i), r.Next(1, i), 2, 2);
+            }
+
+            for (int i = 0; i < 500; i += 50)
             {
                 for(int j = 0; j < 500; j += 50)
                 {
