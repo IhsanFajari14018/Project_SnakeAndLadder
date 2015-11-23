@@ -134,7 +134,7 @@ namespace Project_SnakeAndLadder
                 game.RunTheGame();
                 if (!game.GetPlayerAtTurn(1).IsCompPlayer()&&game.GetCurrentTurn()%2==1) buttonKocok.Enabled = false;
                 int dice = currentPlayer.GetDiceNum();
-                labelDice.Text = "Keluaran:\n" + dice;
+                labelDice1.Text = "Keluaran\n"+ currentPlayer.GetName() + ":\n" + dice;
                 Invalidate();
                 if (game.GetWinner() != null)
                 {
@@ -152,7 +152,7 @@ namespace Project_SnakeAndLadder
                 game.RunTheGame();
                 if(game.GetCurrentTurn()%2==0) buttonKocok.Enabled = true;
                 int dice = currentPlayer.GetDiceNum();
-                labelDice.Text = "Keluaran:\n" + dice;
+                labelDice2.Text = "Keluaran\n" + currentPlayer.GetName() + ":\n" + dice;
                 Invalidate();
                 if (game.GetWinner() != null)
                 {

@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.buttonKocok = new System.Windows.Forms.Button();
-            this.labelDice = new System.Windows.Forms.Label();
+            this.labelDice1 = new System.Windows.Forms.Label();
+            this.labelDice2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonKocok
@@ -42,22 +44,45 @@
             this.buttonKocok.UseVisualStyleBackColor = true;
             this.buttonKocok.Click += new System.EventHandler(this.buttonKocok_Click);
             // 
-            // labelDice
+            // labelDice1
             // 
-            this.labelDice.AutoSize = true;
-            this.labelDice.Location = new System.Drawing.Point(519, 45);
-            this.labelDice.Name = "labelDice";
-            this.labelDice.Size = new System.Drawing.Size(52, 26);
-            this.labelDice.TabIndex = 1;
-            this.labelDice.Text = "Keluaran:\r\n0";
-            this.labelDice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelDice1.AutoSize = true;
+            this.labelDice1.Location = new System.Drawing.Point(519, 45);
+            this.labelDice1.Name = "labelDice1";
+            this.labelDice1.Size = new System.Drawing.Size(49, 39);
+            this.labelDice1.TabIndex = 1;
+            this.labelDice1.Text = "Keluaran\r\nPlayer 1:\r\n0";
+            this.labelDice1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelDice2
+            // 
+            this.labelDice2.AutoSize = true;
+            this.labelDice2.Location = new System.Drawing.Point(519, 101);
+            this.labelDice2.Name = "labelDice2";
+            this.labelDice2.Size = new System.Drawing.Size(49, 39);
+            this.labelDice2.TabIndex = 2;
+            this.labelDice2.Text = "Keluaran\r\nPlayer 2:\r\n0";
+            this.labelDice2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(504, 351);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 130);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Petunjuk :\r\nPlayer 1 \r\nmenggunakan \r\ntombol \r\n\"Kocok dadu\"\r\n\r\nPlayer 2 \r\nmengguna" +
+    "kan \r\ntombol \r\n\"R\" keyboard\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(594, 511);
-            this.Controls.Add(this.labelDice);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelDice2);
+            this.Controls.Add(this.labelDice1);
             this.Controls.Add(this.buttonKocok);
             this.Name = "MainForm";
             this.Text = "Snakes and Ladders";
@@ -70,7 +95,9 @@
         #endregion
 
         private System.Windows.Forms.Button buttonKocok;
-        private System.Windows.Forms.Label labelDice;
+        private System.Windows.Forms.Label labelDice1;
+        private System.Windows.Forms.Label labelDice2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
