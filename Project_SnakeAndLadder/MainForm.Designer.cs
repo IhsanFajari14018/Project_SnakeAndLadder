@@ -69,9 +69,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(504, 351);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 130);
+            this.label1.Size = new System.Drawing.Size(78, 143);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Petunjuk :\r\nPlayer 1 \r\nmenggunakan \r\ntombol \r\n\"Kocok dadu\"\r\n\r\nPlayer 2 \r\nmengguna" +
+            this.label1.Text = "PETUNJUK :\r\n\r\nPLAYER 1\r\nmenggunakan \r\ntombol \r\n\"Kocok dadu\"\r\n\r\nPLAYER 2\r\nmengguna" +
     "kan \r\ntombol \r\n\"R\" keyboard\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
