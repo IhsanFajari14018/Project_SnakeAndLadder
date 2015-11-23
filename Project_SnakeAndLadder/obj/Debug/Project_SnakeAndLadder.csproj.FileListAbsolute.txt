@@ -14,3 +14,13 @@ C:\Users\Aspire4755\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\o
 C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\bin\Debug\Project_SnakeAndLadder.exe.config
 C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.exe
 C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.pdb
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\bin\Debug\Project_SnakeAndLadder.exe
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\bin\Debug\Project_SnakeAndLadder.pdb
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\bin\Debug\Engine.dll
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\bin\Debug\Engine.pdb
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\bin\Debug\Engine.xml
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.csprojResolveAssemblyReference.cache
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.MainForm.resources
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.MenuForm.resources
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.Properties.Resources.resources
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.csproj.GenerateResource.Cache

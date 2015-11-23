@@ -48,6 +48,16 @@ namespace Project_SnakeAndLadder
             SolidBrush tileNum = new SolidBrush(Color.Brown);
             SolidBrush snakeNum = new SolidBrush(Color.Red);
             SolidBrush ladderNum = new SolidBrush(Color.Blue);
+
+            Tile[] tiles = b.GetTiles();
+            for(int i = 0; i < 500; i += 50)
+            {
+                for(int j = 0; j < 500; j += 50)
+                {
+                    g.DrawImage(tile, i, j, 50, 50);
+                }
+            }
+
         }
     }
 }
