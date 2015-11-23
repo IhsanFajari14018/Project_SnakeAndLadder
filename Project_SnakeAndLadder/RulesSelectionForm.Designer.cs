@@ -35,14 +35,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelComp = new System.Windows.Forms.Label();
+            this.labelHuman = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,25 +113,15 @@
             this.label10.Text = "PEMAIN KELUAR DARI BLACK HOLE DAN LEBIH JAUH DARI BUMI\r\nTempat pemberhentian blac" +
     "k hole dengan nomor (merah) yang sama.";
             // 
-            // pictureBox1
+            // pictureBox4
             // 
-            this.pictureBox1.BackgroundImage = global::Project_SnakeAndLadder.Properties.Resources.rocket;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 257);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Project_SnakeAndLadder.Properties.Resources.planet;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 331);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox4.BackgroundImage = global::Project_SnakeAndLadder.Properties.Resources.whiteHole;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(15, 464);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -141,21 +133,55 @@
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
+            // pictureBox2
             // 
-            this.pictureBox4.BackgroundImage = global::Project_SnakeAndLadder.Properties.Resources.whiteHole;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(15, 464);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox2.BackgroundImage = global::Project_SnakeAndLadder.Properties.Resources.planet;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 331);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Project_SnakeAndLadder.Properties.Resources.rocket;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 257);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelComp
+            // 
+            this.labelComp.Image = global::Project_SnakeAndLadder.Properties.Resources.vs_computerButton;
+            this.labelComp.Location = new System.Drawing.Point(374, 539);
+            this.labelComp.Name = "labelComp";
+            this.labelComp.Size = new System.Drawing.Size(129, 25);
+            this.labelComp.TabIndex = 14;
+            this.labelComp.Click += new System.EventHandler(this.labelComp_Click);
+            this.labelComp.MouseLeave += new System.EventHandler(this.labelComp_MouseLeave);
+            this.labelComp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelComp_MouseMove);
+            // 
+            // labelHuman
+            // 
+            this.labelHuman.Image = global::Project_SnakeAndLadder.Properties.Resources.vs_playerButton;
+            this.labelHuman.Location = new System.Drawing.Point(110, 539);
+            this.labelHuman.Name = "labelHuman";
+            this.labelHuman.Size = new System.Drawing.Size(129, 25);
+            this.labelHuman.TabIndex = 15;
+            this.labelHuman.Click += new System.EventHandler(this.labelHuman_Click);
+            this.labelHuman.MouseLeave += new System.EventHandler(this.labelHuman_MouseLeave);
+            this.labelHuman.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelHuman_MouseMove);
             // 
             // RulesSelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 610);
+            this.Controls.Add(this.labelHuman);
+            this.Controls.Add(this.labelComp);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -168,10 +194,10 @@
             this.Controls.Add(this.label1);
             this.Name = "RulesSelectionForm";
             this.Text = "Rules";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +215,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label labelComp;
+        private System.Windows.Forms.Label labelHuman;
     }
 }
