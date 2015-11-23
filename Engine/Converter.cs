@@ -25,19 +25,19 @@ namespace Engine{
     private void Convert(){
       int tempX=0;
       int tempY=0;
-      tempX=posisi/10;
-      if(posisi%10==0) tempX--;
+      tempX=position/10;
+      if(position%10==0) tempX--;
       this.x=(9-tempX);
 		
       if(x%2==0){
-        if((posisi%10)>0){
-          tempY=(9-(posisi%10))+1;
+        if((position % 10)>0){
+          tempY=(9-(position % 10))+1;
         }
         this.y=tempY;
       }
       else{
-        if(posisi%10==0) y=9;
-        else y=(posisi%10)-1;
+        if(position % 10==0) y=9;
+        else y=(position % 10)-1;
       }
     }
     
