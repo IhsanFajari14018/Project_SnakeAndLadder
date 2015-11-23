@@ -11,6 +11,10 @@ using Engine;
 
 namespace Project_SnakeAndLadder
 {
+    /// <summary>
+    /// Kelas ini diturunkan dari Form
+    /// Kelas ini merepresentasikan tampilan utama dari game
+    /// </summary>
     public partial class MainForm : Form
     {
         private Game game;
@@ -20,6 +24,10 @@ namespace Project_SnakeAndLadder
         private Bitmap[] playerAvatars;
         private Converter convert;
 
+        /// <summary>
+        /// Konstraktor
+        /// </summary>
+        /// <param name="gameType">tipe game (1.(player vs player) atau 2.(player vs computer))</param>
         public MainForm(int gameType)
         {
             InitializeComponent();
@@ -39,6 +47,10 @@ namespace Project_SnakeAndLadder
             }
         }
 
+        /// <summary>
+        /// Method untuk menampilkan game
+        /// </summary>
+        /// <param name="e">paint event args</param>
         protected override void OnPaint(PaintEventArgs e)
         {
             Random r = new Random();
@@ -64,6 +76,7 @@ namespace Project_SnakeAndLadder
                 g.FillEllipse(ladderNum, r.Next(1, i), r.Next(1, i), 2, 2);
             }
 
+            //Menggambar board
             for (int i = 0; i < 500; i += 50)
             {
                 for(int j = 0; j < 500; j += 50)
@@ -71,7 +84,9 @@ namespace Project_SnakeAndLadder
                     g.DrawImage(tile, i, j, 50, 50);
                 }
             }
-            g.DrawImage(finishTile, 0, 0, 50, 50);
+            g.DrawImage(finishTile, 0, 0, 50, 50); //Menggambar tile finish
+
+            //Menggambar semua snake
             for(int i = 0; i < snakes.Length; i++)
             {
                 int head = snakes[i].Head;
@@ -90,7 +105,8 @@ namespace Project_SnakeAndLadder
                 g.DrawString((i + 1 + ""), new Font("Comic Sans MS", 7), snakeNum, tailX+30, tailY+30);
             }
 
-            for(int i = 0; i < ladders.Length; i++)
+            //Menggambar semua ladder
+            for (int i = 0; i < ladders.Length; i++)
             {
                 int head = ladders[i].Head;
                 int tail = ladders[i].Tail;
@@ -108,6 +124,7 @@ namespace Project_SnakeAndLadder
                 g.DrawString((i + 1 + ""), new Font("Comic Sans MS", 7), ladderNum, tailX + 30, tailY + 30);
             }
 
+            //Menuliskan nomor tile
             for (int i = 100; i > 0; i--)
             {
                 convert.Convert(i);
@@ -115,6 +132,8 @@ namespace Project_SnakeAndLadder
                 int yPos = (convert.GetY() * 50);
                 g.DrawString((i+""), new Font("Comic Sans MS", 10), tileNum, xPos, yPos);
             }
+
+            //Menggambar avatar pemain
             convert.Convert(game.GetPlayerAtTurn(0).GetPosition()+1);
             int x = convert.GetX()*50;
             int y = convert.GetY()*50;
@@ -126,6 +145,11 @@ namespace Project_SnakeAndLadder
             g.DrawImage(playerAvatars[1], x, y, 50, 50);
         }
 
+        /// <summary>
+        /// Method untuk menjalankan game bila tombol kocok di klik
+        /// </summary>
+        /// <param name="sender">Objek sender</param>
+        /// <param name="e">event args</param>
         private void buttonKocok_Click(object sender, EventArgs e)
         {
             if (game.GetCurrentTurn() % 2 == 0)
@@ -144,6 +168,11 @@ namespace Project_SnakeAndLadder
             }
         }
 
+        /// <summary>
+        /// Method untuk menjalankan game bila tombol R ditekan
+        /// </summary>
+        /// <param name="sender">objek sender</param>
+        /// <param name="e">key event args</param>
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             if ((e.KeyCode == Keys.R)&&(game.GetCurrentTurn()%2==1)&&game.GetWinner()==null)
