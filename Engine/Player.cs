@@ -21,7 +21,7 @@ namespace Engine
         /// <param name="isComp"> pemain merupakan komputer atau bukan</param>
         public Player(int position, string name, bool isComp)
         {
-            this.position = 0;
+            this.position = -1;
             this.name = name;
             this.win = false;
             this.isComp = isComp;

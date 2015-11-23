@@ -89,13 +89,20 @@ namespace Engine
             }
 
             //giliran player lain.
-            playingTurn = playingTurn + 1;
-            //setelah semua telah mendapat giliran bermain,
-            //dikembalikan ke giliran pertama.
-            if (playingTurn == this.totalPlayer)
+            if (players[playingTurn].GetDiceNum() != 6)
             {
-                playingTurn = 0;
-            }            
+                playingTurn = playingTurn + 1;
+                //setelah semua telah mendapat giliran bermain,
+                //dikembalikan ke giliran pertama.
+                if (playingTurn == this.totalPlayer)
+                {
+                    playingTurn = 0;
+                }
+                if (players[playingTurn].IsCompPlayer())
+                {
+                    RunTheGame();
+                }
+            }
         }        
         
         ///<summary>
@@ -138,6 +145,16 @@ namespace Engine
         public int GetCurrentTurn()
         {
             return this.playingTurn;
+        }
+
+        /// <summary>
+        /// Method untuk mendapatkan pemain dengan giliran tertentu
+        /// </summary>
+        /// <param name="turn">Giliran pemain</param>
+        /// <returns>Pemain dengan giliran tertentu</returns>
+        public Player GetPlayerAtTurn(int turn)
+        {
+            return players[turn];
         }
     }
 

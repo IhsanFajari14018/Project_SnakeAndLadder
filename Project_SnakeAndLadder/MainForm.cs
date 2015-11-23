@@ -45,10 +45,10 @@ namespace Project_SnakeAndLadder
             Bitmap background = new Bitmap(Properties.Resources.space);
             Bitmap tile = new Bitmap(Properties.Resources.tile);
             Bitmap finishTile = new Bitmap(Properties.Resources.finish);
-            Bitmap snakeHead = new Bitmap(Properties.Resources.whiteHole);
-            Bitmap snakeTail = new Bitmap(Properties.Resources.blackHole);
-            Bitmap ladderHead = new Bitmap(Properties.Resources.rocket);
-            Bitmap ladderTail = new Bitmap(Properties.Resources.planet);
+            Bitmap snakeHead = new Bitmap(Properties.Resources.blackHole);
+            Bitmap snakeTail = new Bitmap(Properties.Resources.whiteHole);
+            Bitmap ladderHead = new Bitmap(Properties.Resources.planet);
+            Bitmap ladderTail = new Bitmap(Properties.Resources.rocket);
             Graphics g = e.Graphics;
             SolidBrush tileNum = new SolidBrush(Color.Brown);
             SolidBrush snakeNum = new SolidBrush(Color.Red);
@@ -71,18 +71,18 @@ namespace Project_SnakeAndLadder
                     g.DrawImage(tile, i, j, 50, 50);
                 }
             }
-
+            g.DrawImage(finishTile, 0, 0, 50, 50);
             for(int i = 0; i < snakes.Length; i++)
             {
                 int head = snakes[i].Head;
                 int tail = snakes[i].Tail;
-                convert.Convert(head);
+                convert.Convert(head+1);
                 int headX = (convert.GetX() * 50)+5;
-                int headY = 455 - (convert.GetY() * 50);
+                int headY = 5 + (convert.GetY() * 50);
 
-                convert.Convert(tail);
+                convert.Convert(tail+1);
                 int tailX = (convert.GetX() * 50) + 5;
-                int tailY = 455 - (convert.GetY() * 50);
+                int tailY = 5 + (convert.GetY() * 50);
 
                 g.DrawImage(snakeHead, headX, headY, 40, 40);
                 g.DrawImage(snakeTail, tailX, tailY, 40, 40);
@@ -94,13 +94,13 @@ namespace Project_SnakeAndLadder
             {
                 int head = ladders[i].Head;
                 int tail = ladders[i].Tail;
-                convert.Convert(head);
+                convert.Convert(head+1);
                 int headX = (convert.GetX() * 50) + 5;
-                int headY = 455 - (convert.GetY() * 50);
+                int headY = 5 + (convert.GetY() * 50);
 
-                convert.Convert(tail);
+                convert.Convert(tail+1);
                 int tailX = (convert.GetX() * 50) + 5;
-                int tailY = 455 - (convert.GetY() * 50);
+                int tailY = 5 + (convert.GetY() * 50);
 
                 g.DrawImage(ladderHead, headX, headY, 40, 40);
                 g.DrawImage(ladderTail, tailX, tailY, 40, 40);
@@ -111,18 +111,55 @@ namespace Project_SnakeAndLadder
             for (int i = 100; i > 0; i--)
             {
                 convert.Convert(i);
-                int x = (convert.GetX() * 50);
-                int y = (convert.GetY() * 50);
-                g.DrawString((i+""), new Font("Comic Sans MS", 10), tileNum, x, y);
+                int xPos = (convert.GetX() * 50);
+                int yPos = (convert.GetY() * 50);
+                g.DrawString((i+""), new Font("Comic Sans MS", 10), tileNum, xPos, yPos);
             }
+            convert.Convert(game.GetPlayerAtTurn(0).GetPosition()+1);
+            int x = convert.GetX()*50;
+            int y = convert.GetY()*50;
+            g.DrawImage(playerAvatars[0], x, y, 50, 50);
+
+            convert.Convert(game.GetPlayerAtTurn(1).GetPosition() + 1);
+            x = convert.GetX() * 50;
+            y = convert.GetY() * 50;
+            g.DrawImage(playerAvatars[1], x, y, 50, 50);
         }
 
         private void buttonKocok_Click(object sender, EventArgs e)
         {
-            Player currentPlayer = game.GetCurrentPlayer();
-            game.RunTheGame();
-            int dice = currentPlayer.GetDiceNum();
-            labelDice.Text = "Keluaran:\n" + dice;
+            if (game.GetCurrentTurn() % 2 == 0)
+            {
+                Player currentPlayer = game.GetCurrentPlayer();
+                game.RunTheGame();
+                if (!game.GetPlayerAtTurn(1).IsCompPlayer()&&game.GetCurrentTurn()%2==1) buttonKocok.Enabled = false;
+                int dice = currentPlayer.GetDiceNum();
+                labelDice.Text = "Keluaran:\n" + dice;
+                Invalidate();
+                if (game.GetWinner() != null)
+                {
+                    MessageBox.Show(game.GetWinnerInformation() + " menang!", "Message");
+                    buttonKocok.Enabled = false;
+                }
+            }
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.R)&&(game.GetCurrentTurn()%2==1)&&game.GetWinner()==null)
+            {
+                Player currentPlayer = game.GetCurrentPlayer();
+                game.RunTheGame();
+                if(game.GetCurrentTurn()%2==0) buttonKocok.Enabled = true;
+                int dice = currentPlayer.GetDiceNum();
+                labelDice.Text = "Keluaran:\n" + dice;
+                Invalidate();
+                if (game.GetWinner() != null)
+                {
+                    MessageBox.Show(game.GetWinnerInformation() + " menang!", "Message");
+                    buttonKocok.Enabled = false;
+                }
+            }
         }
     }
 }

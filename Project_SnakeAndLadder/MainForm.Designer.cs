@@ -61,6 +61,7 @@
             this.Controls.Add(this.buttonKocok);
             this.Name = "MainForm";
             this.Text = "Snakes and Ladders";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

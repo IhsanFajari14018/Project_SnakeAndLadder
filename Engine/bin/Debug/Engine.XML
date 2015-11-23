@@ -164,6 +164,13 @@
             </summary>
             <returns>Nomor giliran</returns>
         </member>
+        <member name="M:Engine.Game.GetPlayerAtTurn(System.Int32)">
+            <summary>
+            Method untuk mendapatkan pemain dengan giliran tertentu
+            </summary>
+            <param name="turn">Giliran pemain</param>
+            <returns>Pemain dengan giliran tertentu</returns>
+        </member>
         <member name="M:Engine.Ladder.#ctor(System.Int32,System.Int32)">
             <summary>
             Konstraktor
