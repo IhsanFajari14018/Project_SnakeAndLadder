@@ -1,5 +1,9 @@
 namespace Engine
 {
+    /// <summary>
+    /// Kelas ini diturunkan dari kelas Teleporter
+    /// Kelas ini merepresentasikan satu snake
+    /// </summary>
     public class Snake : Teleporter //tail adalah titik akhir (end)
     {
         /// <summary>
