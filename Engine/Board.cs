@@ -10,6 +10,9 @@ namespace Engine
         private Snake[] snakeSet;
         private Ladder[] ladderSet;
 
+        /// <summary>
+        /// Field untuk menyimpan dan mengembalikan semua snake
+        /// </summary>
         public Snake[] Snakes
         {
             get
@@ -22,6 +25,9 @@ namespace Engine
             }
         }
 
+        /// <summary>
+        /// Field untuk menyimpan dan mengembalikan semua ladder
+        /// </summary>
         public Ladder[] Ladders
         {
             get

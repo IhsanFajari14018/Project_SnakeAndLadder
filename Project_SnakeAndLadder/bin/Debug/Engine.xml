@@ -9,6 +9,16 @@
             Kelas yang merepresentasikan sebuah papan permainan.
             </summary>
         </member>
+        <member name="P:Engine.Board.Snakes">
+            <summary>
+            Field untuk menyimpan dan mengembalikan semua snake
+            </summary>
+        </member>
+        <member name="P:Engine.Board.Ladders">
+            <summary>
+            Field untuk menyimpan dan mengembalikan semua ladder
+            </summary>
+        </member>
         <member name="M:Engine.Board.#ctor">
             <summary>
             Constructor kelas Board.
@@ -44,13 +54,13 @@
             Kelas ini digunakan untuk meng-convert posisi pemain ke x dan y
             </summary>
         </member>
-        <member name="M:Engine.Converter.#ctor(System.Int32)">
+        <member name="M:Engine.Converter.#ctor">
             <summary>
             Konstraktor, langsung memanggil method Convert
             </summary>
             <param name="position"> posisi yang ingin diconvert</param>
         </member>
-        <member name="M:Engine.Converter.Convert">
+        <member name="M:Engine.Converter.Convert(System.Int32)">
             <summary>
             Method untuk meng-convert position ke x dan y
             </summary>

@@ -13,16 +13,14 @@ namespace Engine{
     /// Konstraktor, langsung memanggil method Convert
     /// </summary>
     /// <param name="position"> posisi yang ingin diconvert</param>
-    public Converter(int position){
-      this.position=position;
+    public Converter(){
       this.x=this.y=-1;
-      Convert();
     }
     
     /// <summary>
     /// Method untuk meng-convert position ke x dan y
     /// </summary>
-    private void Convert(){
+    public void Convert(int position){
       int tempX=0;
       int tempY=0;
       tempX=position/10;

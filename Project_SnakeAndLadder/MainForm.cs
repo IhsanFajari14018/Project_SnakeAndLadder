@@ -18,6 +18,7 @@ namespace Project_SnakeAndLadder
         private Snake[] snakes;
         private Ladder[] ladders;
         private Bitmap[] playerAvatars;
+        private Converter convert;
 
         public MainForm(int gameType)
         {
@@ -25,6 +26,7 @@ namespace Project_SnakeAndLadder
             b = new Board();
             snakes = b.Snakes;
             ladders = b.Ladders;
+            convert = new Converter();
             game = new Game(b, new Dice(), gameType);
             if (gameType == 1)
             {
@@ -48,8 +50,7 @@ namespace Project_SnakeAndLadder
             SolidBrush tileNum = new SolidBrush(Color.Brown);
             SolidBrush snakeNum = new SolidBrush(Color.Red);
             SolidBrush ladderNum = new SolidBrush(Color.Blue);
-
-            Tile[] tiles = b.GetTiles();
+            
             for(int i = 0; i < 500; i += 50)
             {
                 for(int j = 0; j < 500; j += 50)
@@ -58,6 +59,37 @@ namespace Project_SnakeAndLadder
                 }
             }
 
+            for(int i = 0; i < snakes.Length; i++)
+            {
+                int head = snakes[i].Head;
+                int tail = snakes[i].Tail;
+                convert.Convert(head);
+                int headX = (convert.GetX() * 50)+5;
+                int headY = 455 - (convert.GetY() * 50);
+
+                convert.Convert(tail);
+                int tailX = (convert.GetX() * 50) + 5;
+                int tailY = 455 - (convert.GetY() * 50);
+
+                g.DrawImage(snakeHead, headX, headY, 40, 40);
+                g.DrawImage(snakeTail, tailX, tailY, 40, 40);
+            }
+
+            for(int i = 0; i < ladders.Length; i++)
+            {
+                int head = ladders[i].Head;
+                int tail = ladders[i].Tail;
+                convert.Convert(head);
+                int headX = (convert.GetX() * 50) + 5;
+                int headY = 455 - (convert.GetY() * 50);
+
+                convert.Convert(tail);
+                int tailX = (convert.GetX() * 50) + 5;
+                int tailY = 455 - (convert.GetY() * 50);
+
+                g.DrawImage(ladderHead, headX, headY, 40, 40);
+                g.DrawImage(ladderTail, tailX, tailY, 40, 40);
+            }
         }
     }
 }
