@@ -2,7 +2,7 @@ using System;
 namespace Engine
 {
     ///<summary>
-    ///kelas controller.
+    /// Kelas controller.
     /// yang menjalankan semua proses yang diperlukan untuk menjalankan game ini.
     ///</summary>
     public class Game
@@ -41,6 +41,9 @@ namespace Engine
         ///<summary>
         /// Konstruktor.
         ///</summary>
+        /// <param name="b">objek board</param>
+        /// <param name="d">objek dadu</param>
+        /// <param name="gameType">tipe game</param>
         public Game(Board b, Dice d,int gameType)
         {
             this.dice = d;
@@ -105,34 +108,37 @@ namespace Engine
             }
         }        
         
-        ///<summary>
+        /// <summary>
         /// Method untuk menentukan pemenang.
-        ///</summary>
+        /// </summary>
+        /// <param name="p">pemain yang menang</param>
         public void SetWinner(Player p)
         {
             this.winner = p;
         }
 
-        ///<summary>
-        ///Getter untuk atribut winner
-        ///Mengembalikan Player yang menang
-        ///</summary>
+        /// <summary>
+        /// Getter untuk atribut winner
+        /// </summary>
+        /// <returns>pemain yang menang</returns>
         public Player GetWinner()
         {
             return winner;
         }
 
-        ///<summary>
-        ///Mengembalikan Player yang sedang bermain sekarang
-        ///</summary>
+        /// <summary>
+        /// Mengembalikan Player yang sedang bermain sekarang
+        /// </summary>
+        /// <returns>player yang sedang bermain</returns>
         public Player GetCurrentPlayer()
         {
             return players[playingTurn];
         }
 
-        ///<summary>
-        ///Mengembalikan informasi nama pemenang.
-        ///</summary>
+        /// <summary>
+        /// Mengembalikan informasi nama pemenang.
+        /// </summary>
+        /// <returns>Nama pemenang</returns>
         public string GetWinnerInformation()
         {
             return this.winner.GetName();
