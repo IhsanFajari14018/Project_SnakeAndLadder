@@ -70,25 +70,20 @@ namespace Engine
             //dan mentukan posisi barunya.
             players[playingTurn].Move(this.dice);
             int pos = players[playingTurn].GetPosition();
-            //Console.WriteLine("{0}'s current position: {1}", players[playingTurn].GetName(), pos);
+            
             //apakah player pada posisi tersebut
             //menemukan tangga atau ular.
             Teleporter snakeLadder = papan.GetTile(pos).GetSnakeLadder();
             if (snakeLadder != null)
             {
                 snakeLadder.MovePlayer(players[playingTurn]);
-                //Console.WriteLine("{0}'s current position: {1}", players[playingTurn].GetName(), pos);
             }
-            /*
-            int newPos = papan.getIntoTile();
-            players[turn].setPosition(newPos);
-            */
+            
             //setiap pergerakan player,
             //lakukan pengecekan apakah dia sudah mencapai finish
             if (players[playingTurn].IsWin())
             {
                 SetWinner(players[playingTurn]);
-                //Console.WriteLine("Winner: {0}", GetWinnerInformation());
             }
 
             //giliran player lain.

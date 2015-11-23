@@ -49,9 +49,9 @@
             this.labelDice1.AutoSize = true;
             this.labelDice1.Location = new System.Drawing.Point(519, 45);
             this.labelDice1.Name = "labelDice1";
-            this.labelDice1.Size = new System.Drawing.Size(49, 39);
+            this.labelDice1.Size = new System.Drawing.Size(55, 26);
             this.labelDice1.TabIndex = 1;
-            this.labelDice1.Text = "Keluaran\r\nPlayer 1:\r\n0";
+            this.labelDice1.Text = "Keluaran :\r\n0";
             this.labelDice1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelDice2
@@ -59,9 +59,9 @@
             this.labelDice2.AutoSize = true;
             this.labelDice2.Location = new System.Drawing.Point(519, 101);
             this.labelDice2.Name = "labelDice2";
-            this.labelDice2.Size = new System.Drawing.Size(49, 39);
+            this.labelDice2.Size = new System.Drawing.Size(55, 26);
             this.labelDice2.TabIndex = 2;
-            this.labelDice2.Text = "Keluaran\r\nPlayer 2:\r\n0";
+            this.labelDice2.Text = "Keluaran :\r\n0";
             this.labelDice2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1

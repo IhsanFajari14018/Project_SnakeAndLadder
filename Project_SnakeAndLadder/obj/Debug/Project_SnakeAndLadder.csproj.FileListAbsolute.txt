@@ -26,3 +26,4 @@ C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndL
 C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.csproj.GenerateResource.Cache
 C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.RulesSelectionForm.resources
 C:\Users\Aspire4755\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\obj\Debug\Project_SnakeAndLadder.RulesSelectionForm.resources
+C:\Users\LENOVO Z410_W8PRO\Source\Repos\Project_SnakeAndLadder\Project_SnakeAndLadder\bin\Debug\Project_SnakeAndLadder.XML
