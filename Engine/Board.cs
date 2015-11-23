@@ -72,8 +72,8 @@ namespace Engine
                 if ((start < end) && IsValidSnakeLadder(tiles[start], tiles[end]))
                 {
                     Ladder l = new Ladder(end, start);
-                    tiles[start].SetIsSnake(l);
-                    tiles[end].SetIsSnake(l);
+                    tiles[start].SetIsLadder(l);
+                    tiles[end].SetIsLadder(l);
                     ladderSet[count] = l;
                     count++;
                 }
@@ -86,8 +86,8 @@ namespace Engine
                 if ((start > end) && IsValidSnakeLadder(tiles[start], tiles[end]))
                 {
                     Snake s = new Snake(start, end);
-                    tiles[start].SetIsLadder(s);
-                    tiles[end].SetIsLadder(s);
+                    tiles[start].SetIsSnake(s);
+                    tiles[end].SetIsSnake(s);
                     snakeSet[count] = s;
                     count++;
                 }

@@ -23,19 +23,19 @@ namespace Engine{
     public void Convert(int position){
       int tempX=0;
       int tempY=0;
-      tempX=position/10;
-      if(position%10==0) tempX--;
-      this.x=(9-tempX);
+      tempY=position/10;
+      if(position%10==0) tempY--;
+      this.y=(9-tempY);
 		
-      if(x%2==0){
+      if(y%2==0){
         if((position % 10)>0){
-          tempY=(9-(position % 10))+1;
+          tempX=(9-(position % 10))+1;
         }
-        this.y=tempY;
+        this.x=tempX;
       }
       else{
-        if(position % 10==0) y=9;
-        else y=(position % 10)-1;
+        if(position % 10==0) x=9;
+        else x=(position % 10)-1;
       }
     }
     

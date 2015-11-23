@@ -42,14 +42,14 @@ namespace Project_SnakeAndLadder
         {
             Bitmap tile = new Bitmap(Properties.Resources.tile);
             Bitmap finishTile = new Bitmap(Properties.Resources.finish);
-            Bitmap snakeHead = new Bitmap(Properties.Resources.blackHole);
-            Bitmap snakeTail = new Bitmap(Properties.Resources.whiteHole);
-            Bitmap ladderHead = new Bitmap(Properties.Resources.planet);
-            Bitmap ladderTail = new Bitmap(Properties.Resources.rocket);
+            Bitmap snakeHead = new Bitmap(Properties.Resources.whiteHole);
+            Bitmap snakeTail = new Bitmap(Properties.Resources.blackHole);
+            Bitmap ladderHead = new Bitmap(Properties.Resources.rocket);
+            Bitmap ladderTail = new Bitmap(Properties.Resources.planet);
             Graphics g = e.Graphics;
             SolidBrush tileNum = new SolidBrush(Color.Brown);
             SolidBrush snakeNum = new SolidBrush(Color.Red);
-            SolidBrush ladderNum = new SolidBrush(Color.Blue);
+            SolidBrush ladderNum = new SolidBrush(Color.White);
             
             for(int i = 0; i < 500; i += 50)
             {
@@ -73,6 +73,8 @@ namespace Project_SnakeAndLadder
 
                 g.DrawImage(snakeHead, headX, headY, 40, 40);
                 g.DrawImage(snakeTail, tailX, tailY, 40, 40);
+                g.DrawString((i + 1 + ""), new Font("Comic Sans MS", 7), snakeNum, headX+30, headY+30);
+                g.DrawString((i + 1 + ""), new Font("Comic Sans MS", 7), snakeNum, tailX+30, tailY+30);
             }
 
             for(int i = 0; i < ladders.Length; i++)
@@ -89,6 +91,16 @@ namespace Project_SnakeAndLadder
 
                 g.DrawImage(ladderHead, headX, headY, 40, 40);
                 g.DrawImage(ladderTail, tailX, tailY, 40, 40);
+                g.DrawString((i + 1 + ""), new Font("Comic Sans MS", 7), ladderNum, headX + 30, headY + 30);
+                g.DrawString((i + 1 + ""), new Font("Comic Sans MS", 7), ladderNum, tailX + 30, tailY + 30);
+            }
+
+            for (int i = 100; i > 0; i--)
+            {
+                convert.Convert(i);
+                int x = (convert.GetX() * 50);
+                int y = (convert.GetY() * 50);
+                g.DrawString((i+""), new Font("Comic Sans MS", 10), tileNum, x, y);
             }
         }
     }
