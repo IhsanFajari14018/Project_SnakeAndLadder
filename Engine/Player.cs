@@ -1,5 +1,8 @@
 namespace Engine
 {
+    /// <summary>
+    /// Kelas ini merepresentasikan seorang Player
+    /// </summary>
     public class Player
     {
         private int position;

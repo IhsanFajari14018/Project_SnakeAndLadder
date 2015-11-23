@@ -1,9 +1,9 @@
 using System;
 namespace Engine
 {
-    ///<summary>
-    ///Kelas yang merepresentasikan sebuah papan permainan.
-    ///</summary>
+    /// <summary>
+    /// Kelas yang merepresentasikan sebuah papan permainan.
+    /// </summary>
     public class Board
     {
         private Tile[] tiles;
@@ -93,13 +93,14 @@ namespace Engine
                 }
             }
         }
-        
+
         /// <summary>
         /// Method ini mengembalikan true bila snake atau ladder belum ada di t1 dan t2
         /// false bila snake atau ladder sudah ada di t1 dan t2
         /// </summary>
         /// <param name="t1"> tile yang ingin diperiksa</param>
         /// <param name="t2"> tile yang ingin diperiksa</param>
+        /// <returns>true bila tidak ada snake atau ladder, false jika ada snake atau ladder</returns>
         private bool IsValidSnakeLadder(Tile t1, Tile t2)
         {
             if (t1.GetSnakeLadder() != null || t2.GetSnakeLadder() != null)
@@ -112,18 +113,20 @@ namespace Engine
             }
         }
 
-        ///<summary>
-        ///Method untuk mendapatkan semua petak pada papan.
-        ///</summary>
+        /// <summary>
+        /// Method untuk mendapatkan semua petak pada papan.
+        /// </summary>
+        /// <returns>Semua kotak/tile</returns>
         public Tile[] GetTiles()
         {
             return tiles;
         }
 
-        ///<summary>
-        ///Method untuk mendapatkan petak dengan nomor tertentu
-        ///</summary>
-        ///<param name="num">Indeks petak yang akan dikembalikan</param>
+        /// <summary>
+        /// Method untuk mendapatkan petak dengan nomor tertentu
+        /// </summary>
+        /// <param name="num">Indeks petak yang akan dikembalikan</param>
+        /// <returns>petak dengan nomor tertentu</returns>
         public Tile GetTile(int num)
         {
             return tiles[num];
