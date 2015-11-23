@@ -30,6 +30,8 @@
         {
             this.labelPlay = new System.Windows.Forms.Label();
             this.labelExit = new System.Windows.Forms.Label();
+            this.judulPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.judulPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // labelPlay
@@ -51,16 +53,28 @@
             this.labelExit.TabIndex = 3;
             this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
             // 
+            // judulPictureBox
+            // 
+            this.judulPictureBox.BackgroundImage = global::Project_SnakeAndLadder.Properties.Resources.menuTitle_UlarTangga;
+            this.judulPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.judulPictureBox.Location = new System.Drawing.Point(54, 12);
+            this.judulPictureBox.Name = "judulPictureBox";
+            this.judulPictureBox.Size = new System.Drawing.Size(324, 146);
+            this.judulPictureBox.TabIndex = 4;
+            this.judulPictureBox.TabStop = false;
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Project_SnakeAndLadder.Properties.Resources.wallpaper;
             this.ClientSize = new System.Drawing.Size(434, 411);
+            this.Controls.Add(this.judulPictureBox);
             this.Controls.Add(this.labelExit);
             this.Controls.Add(this.labelPlay);
             this.Name = "MenuForm";
             this.Text = "Menu";
+            ((System.ComponentModel.ISupportInitialize)(this.judulPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,5 +83,6 @@
 
         private System.Windows.Forms.Label labelPlay;
         private System.Windows.Forms.Label labelExit;
+        private System.Windows.Forms.PictureBox judulPictureBox;
     }
 }

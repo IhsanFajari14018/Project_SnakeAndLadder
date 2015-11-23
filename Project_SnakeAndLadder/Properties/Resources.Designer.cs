@@ -103,6 +103,16 @@ namespace Project_SnakeAndLadder.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menuTitle_UlarTangga {
+            get {
+                object obj = ResourceManager.GetObject("menuTitle_UlarTangga", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap planet {
             get {
                 object obj = ResourceManager.GetObject("planet", resourceCulture);
