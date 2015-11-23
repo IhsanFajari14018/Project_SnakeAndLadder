@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Engine</name>
+    </assembly>
+    <members>
+        <member name="T:Engine.Board">
+            <summary>
+            Kelas yang merepresentasikan sebuah papan permainan.
+            </summary>
+        </member>
+        <member name="M:Engine.Board.#ctor">
+            <summary>
+            Constructor kelas Board.
+            </summary>
+        </member>
+        <member name="M:Engine.Board.GenerateBoard">
+            <summary>
+            Method untuk meng-generate board
+            Method ini menentukan posisi snake dan ladder di Tile
+            </summary>
+        </member>
+        <member name="M:Engine.Board.IsValidSnakeLadder(Engine.Tile,Engine.Tile)">
+            <summary>
+            Method ini mengembalikan true bila snake atau ladder belum ada di t1 dan t2
+            false bila snake atau ladder sudah ada di t1 dan t2
+            </summary>
+            <param name="t1"> tile yang ingin diperiksa</param>
+            <param name="t2"> tile yang ingin diperiksa</param>
+        </member>
+        <member name="M:Engine.Board.GetTiles">
+            <summary>
+            Method untuk mendapatkan semua petak pada papan.
+            </summary>
+        </member>
+        <member name="M:Engine.Board.GetTile(System.Int32)">
+            <summary>
+            Method untuk mendapatkan petak dengan nomor tertentu
+            </summary>
+            <param name="num">Indeks petak yang akan dikembalikan</param>
+        </member>
+        <member name="T:Engine.Converter">
+            <summary>
+            Kelas ini digunakan untuk meng-convert posisi pemain ke x dan y
+            </summary>
+        </member>
+        <member name="M:Engine.Converter.#ctor(System.Int32)">
+            <summary>
+            Konstraktor, langsung memanggil method Convert
+            </summary>
+            <param name="position"> posisi yang ingin diconvert</param>
+        </member>
+        <member name="M:Engine.Converter.Convert">
+            <summary>
+            Method untuk meng-convert position ke x dan y
+            </summary>
+        </member>
+        <member name="M:Engine.Converter.GetX">
+            <summary>
+            Getter atribut x
+            </summary>
+        </member>
+        <member name="M:Engine.Converter.GetY">
+            <summary>
+            Getter atribut y
+            </summary>
+        </member>
+        <member name="T:Engine.Dice">
+            <summary>
+            Kelas yang merepresentasikan sebuah dadu.
+            </summary>
+        </member>
+        <member name="M:Engine.Dice.#ctor(System.Int32)">
+            <summary>
+            Constructor kelas Dice dengan parameter.
+            </summary>
+             <param name="sides">Banyaknya sisi pada dadu</param>
+        </member>
+        <member name="M:Engine.Dice.#ctor">
+            <summary>
+            Constructor kelas Dice tanpa parameter.
+            </summary>
+        </member>
+        <member name="M:Engine.Dice.RollDice">
+            <summary>
+            Method untuk mengocok dan mengembalikan nilai dadu.
+            </summary>
+        </member>
+        <member name="T:Engine.Game">
+            <summary>
+            kelas controller.
+             yang menjalankan semua proses yang diperlukan untuk menjalankan game ini.
+            </summary>
+        </member>
+        <member name="F:Engine.Game.papan">
+            <summary>
+             Atribut yang menyimpan board.
+            </summary>
+        </member>
+        <member name="F:Engine.Game.players">
+            <summary>
+             Atribut yang menyimpan banyak player yang ada didalam game.
+            </summary>
+        </member>
+        <member name="F:Engine.Game.winner">
+            <summary>
+             Atribut yang menyimpan object player yang menang.
+            </summary>
+        </member>
+        <member name="F:Engine.Game.dice">
+            <summary>
+             Atribut yang menyimpan object Dice.
+            </summary>
+        </member>
+        <member name="F:Engine.Game.totalPlayer">
+            <summary>
+             Atribut yang menyimpan int banyak player.
+            </summary>
+        </member>
+        <member name="M:Engine.Game.#ctor(Engine.Board,Engine.Dice,System.Int32)">
+            <summary>
+             Konstruktor.
+            </summary>
+        </member>
+        <member name="M:Engine.Game.RunTheGame">
+            <summary>
+             Method untuk menjalankan permainan ular tangga.
+            </summary>
+        </member>
+        <member name="M:Engine.Game.SetWinner(Engine.Player)">
+            <summary>
+             Method untuk menentukan pemenang.
+            </summary>
+        </member>
+        <member name="M:Engine.Game.GetWinner">
+            <summary>
+            Getter untuk atribut winner
+            Mengembalikan Player yang menang
+            </summary>
+        </member>
+        <member name="M:Engine.Game.GetCurrentPlayer">
+            <summary>
+            Mengembalikan Player yang sedang bermain sekarang
+            </summary>
+        </member>
+        <member name="M:Engine.Game.GetWinnerInformation">
+            <summary>
+            Mengembalikan informasi nama pemenang.
+            </summary>
+        </member>
+        <member name="M:Engine.Game.GetCurrentTurn">
+            <summary>
+            Method untuk mengembalikan nomor giliran
+            </summary>
+            <returns>Nomor giliran</returns>
+        </member>
+        <member name="M:Engine.Ladder.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Konstraktor
+            </summary>
+        </member>
+        <member name="M:Engine.Ladder.MovePlayer(Engine.Player)">
+            <summary>
+            Method override untuk memindahkan player
+            </summary>
+            <param name="p">Pemain yang akan dipindahkan</param>
+        </member>
+        <member name="M:Engine.Player.#ctor(System.Int32,System.String,System.Boolean)">
+            <summary>
+            Konstraktor
+            </summary>
+            <param name="position"> posisi pemain</param>
+            <param name="name"> nama pemain</param>
+            <param name="isComp"> pemain merupakan komputer atau bukan</param>
+        </member>
+        <member name="M:Engine.Player.SetPosition(System.Int32)">
+            <summary>
+            Setter atribut position
+            </summary>
+            <param name="position"> posisi pemain yang baru</param>
+        </member>
+        <member name="M:Engine.Player.GetName">
+            <summary>
+            Getter atribut name
+            </summary>
+        </member>
+        <member name="M:Engine.Player.Move(Engine.Dice)">
+            <summary>
+            Method untuk menjalankan pemain
+            </summary>
+            <param name="d"> Objek dice</param>
+        </member>
+        <member name="M:Engine.Player.GetPosition">
+            <summary>
+            Getter atribut position
+            </summary>
+        </member>
+        <member name="M:Engine.Player.IsWin">
+            <summary>
+            Mengembalikan nilai atribut win
+            </summary>
+        </member>
+        <member name="M:Engine.Player.IsCompPlayer">
+            <summary>
+            Mengembalikan nilai atribut isComp
+            </summary>
+        </member>
+        <member name="M:Engine.Snake.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Konstraktor
+            </summary>
+            <param name="head"> posisi kepala snake</param>
+            <param name="tail"> posisi ekor snake</param>
+        </member>
+        <member name="M:Engine.Snake.MovePlayer(Engine.Player)">
+            <summary>
+            Method override untuk memindahkan player
+            </summary>
+            <param name="p"> Player yang ingin dipindahkan</param>
+        </member>
+        <member name="T:Engine.Teleporter">
+            <summary>
+            Kelas abstrak yang merepresentasikan ular atau tangga
+            </summary>
+        </member>
+        <member name="P:Engine.Teleporter.Head">
+            <summary>
+            Field untuk mengganti atau mengembalikan nilai dari atribut privat head
+            </summary>
+        </member>
+        <member name="P:Engine.Teleporter.Tail">
+            <summary>
+            Field untuk mengganti atau mengembalikan nilai dari atribut privat tail
+            </summary>
+        </member>
+        <member name="M:Engine.Teleporter.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructor kelas Teleporter
+            </summary>
+            <param name="head">Bagian kepala dari objek Teleporter</param>
+            <param name="tail">Bagian ekor dari objek Teleporter</param>
+        </member>
+        <member name="M:Engine.Teleporter.MovePlayer(Engine.Player)">
+            <summary>
+            Method abstrak untuk memindahkan pemain
+            </summary>
+            <param name="p">Objek pemain yang akan dipindahkan</param>
+        </member>
+        <member name="T:Engine.Tile">
+            <summary>
+            Kelas yang merepresentasikan sebuah petak pada papan permainan
+            </summary>
+        </member>
+        <member name="M:Engine.Tile.#ctor(System.Int32)">
+            <summary>
+            Constructor kelas Tile
+            </summary>
+             <param name="num">Indeks petak</param>
+        </member>
+        <member name="M:Engine.Tile.SetNumber(System.Int32)">
+            <summary>
+            Method untuk mengganti nomor indeks petak
+            </summary>
+             <param name="num">Indeks petak yang baru</param>
+        </member>
+        <member name="M:Engine.Tile.SetIsSnake(Engine.Teleporter)">
+            <summary>
+            Method untuk mengganti teleporter ular yang ada pada petak
+            </summary>
+             <param name="isSnake">Teleporter ular yang baru</param>
+        </member>
+        <member name="M:Engine.Tile.SetIsLadder(Engine.Teleporter)">
+            <summary>
+            Method untuk mengganti teleporter tangga yang ada pada petak
+            </summary>
+            <param name="isLadder">Teleporter tangga yang baru</param>
+        </member>
+        <member name="M:Engine.Tile.GetNumber">
+            <summary>
+            Method untuk mengembalikan indeks petak
+            </summary>
+        </member>
+        <member name="M:Engine.Tile.IsSnake">
+            <summary>
+            Method untuk mengembalikan teleporter ular yang ada
+            </summary>
+        </member>
+        <member name="M:Engine.Tile.IsLadder">
+            <summary>
+            Method untuk mengembalikan teleporter tangga yang ada
+            </summary>
+        </member>
+        <member name="M:Engine.Tile.GetSnakeLadder">
+            <summary>
+            Method untuk mengembalikan teleporter yang ada
+            </summary>
+        </member>
+    </members>
+</doc>

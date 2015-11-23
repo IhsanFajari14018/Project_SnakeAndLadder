@@ -22,7 +22,9 @@ namespace Project_SnakeAndLadder
         private void labelPlay_Click(object sender, EventArgs e)
         {
             labelHuman.Show();
+            labelHuman.Enabled = true;
             labelComp.Show();
+            labelComp.Enabled = true;
         }
 
         private void labelExit_Click(object sender, EventArgs e)
