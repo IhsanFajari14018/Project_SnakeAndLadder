@@ -1,10 +1,16 @@
 namespace Engine
 {
+    /// <summary>
+    /// Kelas ini diturunkan dari kelas Teleporter
+    /// Kelas ini merepresentasikan sebuah Ladder
+    /// </summary>
     public class Ladder : Teleporter
     {
-        ///<summary>
-        ///Konstraktor
-        ///</summary>
+        /// <summary>
+        /// Konstraktor
+        /// </summary>
+        /// <param name="head">posisi head ladder</param>
+        /// <param name="tail">posisi tail ladder</param>
         public Ladder(int head, int tail) : base(head, tail)
         {
 
