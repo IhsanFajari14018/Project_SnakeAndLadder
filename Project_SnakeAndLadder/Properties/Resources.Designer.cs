@@ -73,6 +73,16 @@ namespace Project_SnakeAndLadder.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dice_06 {
+            get {
+                object obj = ResourceManager.GetObject("dice_06", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exitButton {
             get {
                 object obj = ResourceManager.GetObject("exitButton", resourceCulture);
