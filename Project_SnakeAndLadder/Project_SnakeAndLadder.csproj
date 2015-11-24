@@ -156,13 +156,13 @@
     <None Include="Resources\space.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\wallpaper.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\dice-06.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menuTitle_UlarTangga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpaper.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
