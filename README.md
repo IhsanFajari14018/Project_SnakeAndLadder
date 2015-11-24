@@ -16,3 +16,13 @@ Control permainan (1vs1): </br>
 
 Diagram kelas:
 ![Diagram Kelas](https://cloud.githubusercontent.com/assets/13995172/11363116/64ea2c22-92ca-11e5-9a8e-4fc774180608.jpg)
+
+
+Credits :
+
+Ihsan Fajari
+M Hilman
+Stanley Hanes
+Hendro Tanoto
+Stephanie Tania
+Lydia Febtriani
